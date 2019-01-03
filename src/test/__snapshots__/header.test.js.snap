@@ -1,0 +1,89 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render Header correctly 1`] = `
+<Responsive
+  getWidth={[Function]}
+  minWidth={768}
+>
+  <Visibility
+    context={[Window]}
+    continuous={false}
+    offset={
+      Array [
+        0,
+        0,
+      ]
+    }
+    onBottomPassed={[Function]}
+    onBottomPassedReverse={[Function]}
+    once={false}
+    updateOn="events"
+  >
+    <Segment
+      inverted={true}
+      style={
+        Object {
+          "minHeight": 700,
+          "padding": "1em 0em",
+        }
+      }
+      textAlign="center"
+      vertical={true}
+    >
+      <Menu
+        fixed={null}
+        inverted={true}
+        pointing={true}
+        secondary={true}
+        size="large"
+      >
+        <Container>
+          <MenuItem
+            as="a"
+            to="/"
+          >
+            Home
+          </MenuItem>
+          <MenuItem
+            as="a"
+            to="/about"
+          >
+            Abouts
+          </MenuItem>
+          <MenuItem
+            as="a"
+          >
+            Company
+          </MenuItem>
+          <MenuItem
+            as="a"
+          >
+            Careers
+          </MenuItem>
+          <MenuItem
+            position="right"
+          >
+            <Button
+              as="a"
+              inverted={true}
+            >
+              Log in
+            </Button>
+            <Button
+              as="a"
+              inverted={true}
+              style={
+                Object {
+                  "marginLeft": "0.5em",
+                }
+              }
+            >
+              Sign Up
+            </Button>
+          </MenuItem>
+        </Container>
+      </Menu>
+    </Segment>
+  </Visibility>
+</Responsive>
+`;
