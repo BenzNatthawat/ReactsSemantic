@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import { Container, Menu, Responsive, Segment, Visibility, Header } from 'semantic-ui-react'
-import { NavLink } from 'react-router-dom'
 import LoginRegister from './LoginRegister'
+import Menulist from './Menulist'
+import Sliderimg from './Sliderimg'
 
 export class Headerdesktop extends Component {
 
@@ -33,13 +34,8 @@ export class Headerdesktop extends Component {
               size='large'
             >
               <Container>
-                <Menu.Item as={NavLink} to='/' exact={true}>
-                  Home
-                </Menu.Item>
-                <Menu.Item as={NavLink} to='/about'>Abouts</Menu.Item>
-                <Menu.Item as='a'>Company</Menu.Item>
-                <Menu.Item as='a'>Careers</Menu.Item>
-                <LoginRegister fixed={fixed}/>
+                <Menulist/>
+                <LoginRegister fixed={fixed} />
               </Container>
             </Menu>
 
@@ -55,6 +51,8 @@ export class Headerdesktop extends Component {
                 inverted
               />
             </Container>
+
+            {/* <Sliderimg /> */}
 
           </Segment>
 

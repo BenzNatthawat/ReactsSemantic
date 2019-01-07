@@ -17,17 +17,17 @@ exports[`should render Header correctly 1`] = `
     onBottomPassed={[Function]}
     onBottomPassedReverse={[Function]}
     once={false}
-    updateOn="events"
+    updateOn='events'
   >
     <Segment
       inverted={true}
       style={
         Object {
-          "minHeight": 700,
-          "padding": "1em 0em",
+          'minHeight': 700,
+          'padding': '1em 0em',
         }
       }
-      textAlign="center"
+      textAlign='center'
       vertical={true}
     >
       <Menu
@@ -35,46 +35,46 @@ exports[`should render Header correctly 1`] = `
         inverted={true}
         pointing={true}
         secondary={true}
-        size="large"
+        size='large'
       >
         <Container>
           <MenuItem
-            as="a"
-            to="/"
+            as='a'
+            to='/'
           >
             Home
           </MenuItem>
           <MenuItem
-            as="a"
-            to="/about"
+            as='a'
+            to='/about'
           >
             Abouts
           </MenuItem>
           <MenuItem
-            as="a"
+            as='a'
           >
             Company
           </MenuItem>
           <MenuItem
-            as="a"
+            as='a'
           >
             Careers
           </MenuItem>
           <MenuItem
-            position="right"
+            position='right'
           >
             <Button
-              as="a"
+              as='a'
               inverted={true}
             >
               Log in
             </Button>
             <Button
-              as="a"
+              as='a'
               inverted={true}
               style={
                 Object {
-                  "marginLeft": "0.5em",
+                  'marginLeft': '0.5em',
                 }
               }
             >

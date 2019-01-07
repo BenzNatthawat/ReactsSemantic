@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import { Container, Menu, Responsive, Segment, Sidebar, Icon } from 'semantic-ui-react'
 import LoginRegister from './LoginRegister'
+import Menulist from './Menulist'
+// import Sliderimg from './Sliderimg'
 
 export class Headermobile extends Component {
 
@@ -20,12 +22,7 @@ export class Headermobile extends Component {
           vertical
           visible={sidebarOpened}
         >
-          <Menu.Item as='a' active>
-            Home
-          </Menu.Item>
-          <Menu.Item as='a'>Work</Menu.Item>
-          <Menu.Item as='a'>Company</Menu.Item>
-          <Menu.Item as='a'>Careers</Menu.Item>
+          <Menulist />
           <Menu.Item as='a'>Log in</Menu.Item>
           <Menu.Item as='a'>Sign Up</Menu.Item>
         </Sidebar>
@@ -45,6 +42,9 @@ export class Headermobile extends Component {
                 <LoginRegister />
               </Menu>
             </Container>
+
+            {/* <Sliderimg /> */}
+
           </Segment>
 
         </Sidebar.Pusher>

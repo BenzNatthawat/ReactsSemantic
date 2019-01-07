@@ -1,0 +1,8 @@
+.ui.sticky {
+  z-index: auto;
+  padding-bottom: 1rem;
+}
+
+.top-visibility {
+  padding-top: 60px;
+}
