@@ -3,6 +3,10 @@
   padding-bottom: 1rem;
 }
 
-.top-visibility {
+.sticky-top {
   padding-top: 60px;
+}
+
+ul {
+  padding-inline-start: 0px;
 }

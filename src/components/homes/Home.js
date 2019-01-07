@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Divider, Grid, Image, Segment, Visibility, Sticky, Menu, Header, Icon } from 'semantic-ui-react'
 import './Home.css'
+import Scrollspy from 'react-scrollspy'
 
 export class Home extends Component {
   state = { activeItem: 'home' }
@@ -9,7 +10,10 @@ export class Home extends Component {
     this.setState({ activeItem: name })
     document.getElementById(name).scrollIntoView({ behavior: 'smooth', block: 'start' })
   }
-
+  onUpdateActive = (e) => {
+    if (e)
+      this.setState({ activeItem: e.id })
+  }
   render() {
     const { activeItem, contextRef } = this.state
     return (
@@ -17,28 +21,25 @@ export class Home extends Component {
         <div ref={this.handleContextRef}>
           <Grid columns={2} container stackable>
             <Grid.Column width={13}>
-
-              <Visibility>
+              <Visibility className="sticky-top">
                 <Segment id='home'>
-                  ---------A---------
+                  ---------home---------
                   <Image src='https://react.semantic-ui.com/images/wireframe/media-paragraph.png' />
                   <Divider />
                   <Image src='https://react.semantic-ui.com/images/wireframe/paragraph.png' />
                   <Divider />
                   <Image src='https://react.semantic-ui.com/images/wireframe/paragraph.png' />
                 </Segment>
-
                 <Segment id='messages'>
-                  ---------B---------
+                  ---------messages---------
                   <Image src='https://react.semantic-ui.com/images/wireframe/media-paragraph.png' />
                   <Divider />
                   <Image src='https://react.semantic-ui.com/images/wireframe/paragraph.png' />
                   <Divider />
                   <Image src='https://react.semantic-ui.com/images/wireframe/paragraph.png' />
                 </Segment>
-
                 <Segment id='friends'>
-                  ---------C---------
+                  ---------friends---------
                   <Image src='https://react.semantic-ui.com/images/wireframe/media-paragraph.png' />
                   <Divider />
                   <Image src='https://react.semantic-ui.com/images/wireframe/paragraph.png' />
@@ -50,8 +51,10 @@ export class Home extends Component {
                   ---------LL---------
                   <Header as='h2' icon textAlign='center'>
                     <Icon name='users' circular />
-                    <Header.Content>ยินดีต้อนรับสู่เว็บแทงหวยออนไลน์</Header.Content>
+                    <Header.Content>xxxxxx</Header.Content>
                   </Header>
+                  <Divider />
+                  <Image src='https://react.semantic-ui.com/images/wireframe/paragraph.png' />
                   <p>
                     Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
                     Aenean massa strong. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur
@@ -70,36 +73,37 @@ export class Home extends Component {
             </Grid.Column>
 
             <Grid.Column width={3} className='mobile hidden'>
-              <Sticky context={contextRef} offset={60} className='top-visibility'>
-                <Menu pointing secondary vertical fluid>
-                  <Menu.Item
-                    name='home'
-                    active={activeItem === 'home'}
-                    onClick={this.handleItemClick}
-                  />
-                  <Menu.Item
-                    name='messages'
-                    active={activeItem === 'messages'}
-                    onClick={this.handleItemClick}
-                  />
-                  <Menu.Item
-                    name='friends'
-                    active={activeItem === 'friends'}
-                    onClick={this.handleItemClick}
-                  />
-                  <Menu.Item
-                    name='LL'
-                    active={activeItem === 'LL'}
-                    onClick={this.handleItemClick}
-                  />
-                  
-                </Menu>
-                <p>{calculations.onScreen.toString()}</p>
-              </Sticky>
+              <Scrollspy items={['home', 'messages', 'friends', 'LL']} onUpdate={this.onUpdateActive}>
+                <Sticky context={contextRef} className="sticky-top" offset={60}>
+                  <Menu pointing secondary vertical fluid>
+                    <Menu.Item
+                      name='home'
+                      active={activeItem === 'home'}
+                      onClick={this.handleItemClick}
+                    />
+                    <Menu.Item
+                      name='messages'
+                      active={activeItem === 'messages'}
+                      onClick={this.handleItemClick}
+                    />
+                    <Menu.Item
+                      name='friends'
+                      active={activeItem === 'friends'}
+                      onClick={this.handleItemClick}
+                    />
+                    <Menu.Item
+                      name='LL'
+                      active={activeItem === 'LL'}
+                      onClick={this.handleItemClick}
+                    />
+
+                  </Menu>
+                </Sticky>
+              </Scrollspy>
             </Grid.Column>
           </Grid>
         </div>
-      </Segment>
+      </Segment >
     )
   }
 }
