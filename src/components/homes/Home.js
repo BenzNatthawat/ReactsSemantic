@@ -5,15 +5,11 @@ import Scrollspy from 'react-scrollspy'
 
 export class Home extends Component {
   state = { activeItem: 'home' }
+
   handleContextRef = contextRef => this.setState({ contextRef })
-  handleItemClick = (e, { name }) => {
-    this.setState({ activeItem: name })
-    document.getElementById(name).scrollIntoView({ behavior: 'smooth', block: 'start' })
-  }
-  onUpdateActive = (e) => {
-    if (e)
-      this.setState({ activeItem: e.id })
-  }
+  handleItemClick = (e, { name }) => {document.getElementById(name).scrollIntoView({ behavior: 'smooth', block: 'start' })}
+  onUpdateActive = (e) => {if (e) {this.setState({ activeItem: e.id })}}
+
   render() {
     const { activeItem, contextRef } = this.state
     return (
@@ -72,7 +68,7 @@ export class Home extends Component {
 
             </Grid.Column>
 
-            <Grid.Column width={3} className='mobile hidden'>
+            <Grid.Column width={3} only='computer tablet'>
               <Scrollspy items={['home', 'messages', 'friends', 'LL']} onUpdate={this.onUpdateActive}>
                 <Sticky context={contextRef} className="sticky-top" offset={60}>
                   <Menu pointing secondary vertical fluid>

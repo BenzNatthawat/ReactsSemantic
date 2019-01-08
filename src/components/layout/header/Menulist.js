@@ -10,7 +10,8 @@ export class Menulist extends Component {
           Home
         </Menu.Item>
         <Menu.Item as={NavLink} to='/newses'>Newses</Menu.Item>
-        <Menu.Item as={NavLink} to='/css'>CSS</Menu.Item>
+        <Menu.Item as={NavLink} to='/css02'>CSS02</Menu.Item>
+        <Menu.Item as={NavLink} to='/css03'>CSS03</Menu.Item>
       </>
     )
   }

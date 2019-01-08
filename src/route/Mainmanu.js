@@ -3,7 +3,8 @@ import { Switch, Route } from 'react-router'
 
 import Newses from '../components/newses/Newses'
 import Home from '../components/homes/Home'
-import Css from '../components/csses/css'
+import Css02 from '../components/csses02/css'
+import Css03 from '../components/csses03/css'
 import Responsiveheader from '../components/layout/responsive/Responsiveheader'
 import Footer from '../components/layout/footer/Footer'
 
@@ -15,7 +16,8 @@ export class Mainmanu extends Component {
         <Switch>
           <Route exact path='/' component={Home}/>
           <Route path='/newses' component={Newses} />
-          <Route path='/css' component={Css} />
+          <Route path='/css02' component={Css02} />
+          <Route path='/css03' component={Css03} />
           {/* <Route path='/:user' component={User} /> */}
           {/* <Route component={NoMatch} /> */}
         </Switch>
