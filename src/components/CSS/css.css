@@ -308,3 +308,34 @@ ul {
   background: #faacac;
   border-color: red;
 }
+
+.items__item {
+  border: 2px solid #000;
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+}
+
+.items__item-1 {
+  border: 2px solid #000;
+  background: #2ddf5c;
+}
+
+.items__item-2 {
+  border: 2px solid #000;
+  background: #faacac;
+  width: 400px;
+}
+
+.items__item-3 {
+  border: 2px solid #000;
+  background: #ccc;
+  width: 200px;
+  height: 200px;
+}
+
+.items__item-4 {
+  border: 2px solid #000;
+  background: #d8f3df;
+  height: 150px;
+}

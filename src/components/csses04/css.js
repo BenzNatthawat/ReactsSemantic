@@ -25,7 +25,7 @@ export class css extends Component {
           <h1 className='section-title'>Awesome! Let's dive right in!</h1>
           <div>
 
-            <form className='signup-form' onSubmit={() => alert('xxxxx')}>
+            <form className='signup-form' onSubmit={() => alert('กรุณารอการทำงาน')}>
 
               <div>
                 <label htmlFor='perfix'>titel</label>
