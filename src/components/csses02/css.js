@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Segment } from 'semantic-ui-react'
 
-import './css.css'
+import '../CSS/css.css'
 
 export class css extends Component {
   render() {

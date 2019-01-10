@@ -11,6 +11,8 @@ import { InMemoryCache } from 'apollo-cache-inmemory'
 import { BrowserRouter as Router } from 'react-router-dom'
 import Mainmanu from './route/Mainmanu'
 
+import './index.css'
+
 const httpLink = createHttpLink({
   uri: 'https://eu1.prisma.sh/kritsadapk-9996a4/hello-world/dev'
 })

@@ -12,7 +12,7 @@ export class Headerdesktop extends Component {
 
   render() {
     const { fixed } = this.state
-    const origin = window.location.origin
+    const { origin, pathname } = window.location
     return (
       <Responsive minWidth={Responsive.onlyTablet.minWidth}>
         <Visibility
@@ -23,7 +23,7 @@ export class Headerdesktop extends Component {
           <Segment
             inverted
             textAlign='center'
-            style={{ minHeight: 700, padding: '1em 0em' }}
+            style={{ minHeight: 'auto', padding: '1em 0em' }}
             vertical
           >
             <Menu
@@ -34,7 +34,7 @@ export class Headerdesktop extends Component {
               size='large'
             >
               <Container>
-                <Menulist/>
+                <Menulist />
                 <LoginRegister fixed={fixed} />
               </Container>
             </Menu>
@@ -51,9 +51,7 @@ export class Headerdesktop extends Component {
                 inverted
               />
             </Container>
-
-            {/* <Sliderimg /> */}
-
+            {(pathname==='/'?<Sliderimg />:'')}
           </Segment>
 
         </Visibility>
