@@ -7,8 +7,8 @@ import Css02 from '../components/csses02/css'
 import Css03 from '../components/csses03/css'
 import Css04 from '../components/csses04/css'
 import Css05 from '../components/csses05/css'
-import Responsiveheader from '../components/layout/responsive/Responsiveheader'
-import Footer from '../components/layout/footer/Footer'
+import Responsiveheader from '../template/responsive/Responsiveheader'
+import Footer from '../template/footer/Footer'
 
 export class Mainmanu extends Component {
   render() {

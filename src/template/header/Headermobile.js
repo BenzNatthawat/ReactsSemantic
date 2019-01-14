@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Container, Menu, Responsive, Segment, Sidebar, Icon } from 'semantic-ui-react'
 import LoginRegister from './LoginRegister'
 import Menulist from './Menulist'
-// import Sliderimg from './Sliderimg'
+// import Sliderimg from '../header/Sliderimg'
 
 export class Headermobile extends Component {
 
