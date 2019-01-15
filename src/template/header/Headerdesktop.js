@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Container, Menu, Responsive, Segment, Visibility, Header } from 'semantic-ui-react'
+import { Container, Menu, Responsive, Segment, Visibility, /*Header*/ } from 'semantic-ui-react'
 import LoginRegister from './LoginRegister'
 import Menulist from './Menulist'
 // import Sliderimg from '../header/Sliderimg'
@@ -12,7 +12,7 @@ export class Headerdesktop extends Component {
 
   render() {
     const { fixed } = this.state
-    const { origin, /*pathname*/ } = window.location
+    // const { origin, pathname } = window.location
     return (
       <Responsive minWidth={Responsive.onlyTablet.minWidth}>
         <Visibility
@@ -39,7 +39,7 @@ export class Headerdesktop extends Component {
               </Container>
             </Menu>
 
-            <Container text>
+            {/* <Container text>
               <Header
                 as='h1'
                 content={origin}
@@ -50,7 +50,7 @@ export class Headerdesktop extends Component {
                 content='port 80'
                 inverted
               />
-            </Container>
+            </Container> */}
             {/* {(pathname==='/'?<Sliderimg />:'')} */}
           </Segment>
 

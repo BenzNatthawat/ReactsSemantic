@@ -27,14 +27,24 @@ export class css extends Component {
 
             <div className='items__item'>
               <div className='items__item-1'>div</div>
-              <div className='items__item-2'>W400</div>
-              <div className='items__item-3'>H*W300</div>
-              <div className='items__item-4'>H450</div>
+              <div className='items__item-2'>w=250px</div>
+              <div className='items__item-3'>h=250px</div>
+              <div className='items__item-4'>w/h=300px</div>
+              <div className='items__item-5'>w=350px</div>
+              <div className='items__item-5'>w=350px</div>
             </div>
 
           </div>
         </section>
-        
+        <section id='items'>
+
+          <div className='box'>
+            <div className='box1'></div>
+            <div className='box2'></div>
+          </div>
+
+        </section>
+
       </Segment>
     )
   }
